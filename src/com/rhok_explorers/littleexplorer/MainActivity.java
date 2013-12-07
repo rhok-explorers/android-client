@@ -18,11 +18,12 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 public class MainActivity extends Activity {
 
 	public static final String EXTRA_MESSAGE = "message";
-	public static final String PROPERTY_REG_ID = "registration_id";
+	public static final String PROPERTY_REG_ID = "488050968981";
 	private static final String PROPERTY_APP_VERSION = "appVersion";
 	private static final int PLAY_SERVICES_RESOLUTION_REQUEST = 9000;
 
@@ -35,11 +36,12 @@ public class MainActivity extends Activity {
 	/**
 	 * Tag used on log messages.
 	 */
-	static final String TAG = "Explorers";
+	static final String TAG = "EXPLORERS";
 
 	Button IniziaAvventura, IlMioDiario;
 	GoogleCloudMessaging gcm;
 	Context context;
+	TextView mDisplay;
 
 	String regid;
 
@@ -47,6 +49,8 @@ public class MainActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
+		
+		mDisplay = (TextView) findViewById(R.id.display);
 
 		IniziaAvventura = (Button) findViewById(R.id.IniziaAvventura);
 		IlMioDiario = (Button) findViewById(R.id.IlMioDiario);
@@ -57,7 +61,7 @@ public class MainActivity extends Activity {
 			gcm = GoogleCloudMessaging.getInstance(this);
 			regid = getRegistrationId(context);
 
-			if (regid.isEmpty()) {
+			if (regid.equals("")) {
 				registerInBackground();
 			}
 		} else {
@@ -152,7 +156,7 @@ public class MainActivity extends Activity {
 	private String getRegistrationId(Context context) {
 		final SharedPreferences prefs = getGcmPreferences(context);
 		String registrationId = prefs.getString(PROPERTY_REG_ID, "");
-		if (registrationId.isEmpty()) {
+		if (registrationId.equals("")) {
 			Log.i(TAG, "Registration not found.");
 			return "";
 		}

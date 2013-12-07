@@ -21,7 +21,7 @@ public class GcmIntentService extends IntentService {
 		super("GcmIntentService");
 	}
 
-	public static final String TAG = "Explorers";
+	public static final String TAG = "EXPLORERS";
 	
 	@Override
 	protected void onHandleIntent(Intent intent) {
