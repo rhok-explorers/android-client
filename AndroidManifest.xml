@@ -22,6 +22,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name="com.rhok_explorers.littleexplorer.Percorsi"
+            android:label="@string/title_activity_percorsi" >
+        </activity>
+        <activity
+            android:name="com.rhok_explorers.littleexplorer.Diario"
+            android:label="@string/title_activity_diario" >
+        </activity>
     </application>
 
 </manifest>
