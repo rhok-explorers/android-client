@@ -3,6 +3,8 @@ package com.rhok_explorers.littleexplorer;
 import android.os.Bundle;
 import android.app.Activity;
 import android.view.Menu;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
 
 public class Diario extends Activity {
 
