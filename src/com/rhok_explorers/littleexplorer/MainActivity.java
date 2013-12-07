@@ -41,7 +41,6 @@ public class MainActivity extends Activity {
 	Button IniziaAvventura, IlMioDiario;
 	GoogleCloudMessaging gcm;
 	Context context;
-	TextView mDisplay;
 
 	String regid;
 
@@ -52,8 +51,6 @@ public class MainActivity extends Activity {
 		
 		context = this.getApplicationContext();
 		
-		mDisplay = (TextView) findViewById(R.id.display);
-
 		IniziaAvventura = (Button) findViewById(R.id.IniziaAvventura);
 		IlMioDiario = (Button) findViewById(R.id.IlMioDiario);
 
@@ -141,8 +138,9 @@ public class MainActivity extends Activity {
 
 			@Override
 			protected void onPostExecute(String msg) {
-				mDisplay.append(msg + "\n");
+				Log.i(TAG, msg);
 			}
+			
 		}.execute(null, null, null);
 	}
 
