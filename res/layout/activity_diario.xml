@@ -1,7 +1,147 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ListView xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent" >
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <ImageView
+        android:id="@+id/icon_punteggio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="25dp"
+        android:src="@drawable/icona_punteggi" />
+
+    <TextView
+        android:id="@+id/textpunteggio"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:gravity="center_vertical"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@+id/icon_punteggio"
+        android:text="Punteggio"
+        android:textSize="20sp" />
     
 
-</ListView>
+    <ImageView
+        android:id="@+id/icon_medaglie"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/icon_punteggio"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="25dp"
+        android:src="@drawable/icona_punteggi" />
+    
+    <TextView
+        android:id="@+id/textmedaglie"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:gravity="center_vertical"
+        android:layout_below="@+id/textpunteggio"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@id/icon_medaglie"
+        android:text="Medaglie"
+        android:textSize="20sp" />
+    
+    <TextView
+        android:id="@+id/textmedaglie"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:gravity="center_vertical"
+        android:layout_below="@+id/textpunteggio"
+        android:layout_marginTop="25dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="25dp"
+        android:text="0"
+        android:textSize="20sp" />
+    
+    
+    
+    <ImageView
+        android:id="@+id/icon_percorsi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/icon_medaglie"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="25dp"
+        android:src="@drawable/icona_punteggi" />
+    
+    <TextView
+        android:id="@+id/textpercorsi"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:gravity="center_vertical"
+        android:layout_below="@+id/textmedaglie"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@id/icon_percorsi"
+        android:text="Percorsi completati"
+        android:textSize="20sp" />
+    
+    <TextView
+        android:id="@+id/textpercorsi"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:gravity="center_vertical"
+        android:layout_below="@+id/textmedaglie"
+        android:layout_marginTop="25dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="25dp"
+        android:text="0"
+        android:textSize="20sp" />
+    
+    
+    
+    <ImageView
+        android:id="@+id/icon_percorsiNO"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/icon_percorsi"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="25dp"
+        android:src="@drawable/icona_punteggi" />
+  
+    <TextView
+        android:id="@+id/textpercorsiNO"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:layout_below="@+id/textpercorsi"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@id/icon_percorsiNO"
+        android:text="Percorsi da completare per il prossmo livello"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/textpercorsiNO"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:layout_below="@+id/textpercorsi"
+        android:layout_marginTop="25dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="25dp"
+        android:text="10"
+        android:textSize="20sp" />
+    
+    
+    <TextView
+        android:id="@+id/numberpunteggio"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="25dp"
+        android:layout_alignTop="@+id/icon_punteggio"
+        android:gravity="center_vertical"
+        android:text="0"
+        android:textSize="20sp" />
+    
+</RelativeLayout>

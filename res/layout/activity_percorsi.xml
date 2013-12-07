@@ -8,5 +8,10 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".Percorsi" >
 
+	<ListView
+    	android:id="@+id/ListPercorsi"
+    	android:layout_width="fill_parent"
+    	android:layout_height="wrap_content" >
+	</ListView>
 
 </RelativeLayout>
