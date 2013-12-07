@@ -23,15 +23,15 @@ import android.widget.TextView;
 public class MainActivity extends Activity {
 
 	public static final String EXTRA_MESSAGE = "message";
-	public static final String PROPERTY_REG_ID = "488050968981";
-	private static final String PROPERTY_APP_VERSION = "appVersion";
+	public static final String PROPERTY_REG_ID = "registration_id";
+	private static final String PROPERTY_APP_VERSION = "1";
 	private static final int PLAY_SERVICES_RESOLUTION_REQUEST = 9000;
 
 	/**
 	 * Substitute you own sender ID here. This is the project number you got
 	 * from the API Console, as described in "Getting Started."
 	 */
-	String SENDER_ID = "Your-Sender-ID";
+	String SENDER_ID = "488050968981";
 
 	/**
 	 * Tag used on log messages.
@@ -50,6 +50,8 @@ public class MainActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 		
+		context = this.getApplicationContext();
+		
 		mDisplay = (TextView) findViewById(R.id.display);
 
 		IniziaAvventura = (Button) findViewById(R.id.IniziaAvventura);
@@ -59,7 +61,7 @@ public class MainActivity extends Activity {
 		// GCM registration.
 		if (checkPlayServices()) {
 			gcm = GoogleCloudMessaging.getInstance(this);
-			regid = getRegistrationId(context);
+			regid = getRegistrationId(this);
 
 			if (regid.equals("")) {
 				registerInBackground();
@@ -195,8 +197,7 @@ public class MainActivity extends Activity {
      */
     private static int getAppVersion(Context context) {
         try {
-            PackageInfo packageInfo = context.getPackageManager()
-                    .getPackageInfo(context.getPackageName(), 0);
+            PackageInfo packageInfo = context.getPackageManager().getPackageInfo(context.getPackageName(), 0);
             return packageInfo.versionCode;
         } catch (NameNotFoundException e) {
             // should never happen
