@@ -8,8 +8,11 @@ import org.achartengine.renderer.SimpleSeriesRenderer;
 
 import android.os.Bundle;
 import android.app.Activity;
+import android.content.Intent;
 import android.graphics.Color;
 import android.view.Menu;
+import android.view.View;
+import android.widget.Button;
 import android.widget.RelativeLayout;
 
 public class DettaglioPercorso extends Activity {
@@ -17,53 +20,67 @@ public class DettaglioPercorso extends Activity {
 	GraphicalView mChartView = null;
 	private DefaultRenderer mRenderer = new DefaultRenderer();
 	private CategorySeries mSeries = new CategorySeries("Expenses");
-	private static int[] COLORS = new int[] {Color.GREEN, Color.BLUE, Color.MAGENTA, Color.YELLOW, Color.RED, Color.DKGRAY, Color.BLACK};
-	
+	private static int[] COLORS = new int[] { Color.GREEN, Color.BLUE,
+			Color.MAGENTA, Color.YELLOW, Color.RED, Color.DKGRAY, Color.BLACK };
+
+	Button inizia;
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_dettaglio_percorso);
+
+		inizia = (Button) findViewById(R.id.Inizia);
 		
+		inizia.setOnClickListener(new View.OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				Intent mapIntent = new Intent(DettaglioPercorso.this, Cartina.class);
+				startActivity(mapIntent);
+			}
+		});
+
 		double[] values = new double[2];
 		String[] categoryNames = new String[2];
+
+		values[0] = 70;
+		categoryNames[0] = "Animali";
+		values[1] = 30;
+		categoryNames[1] = "Piante";
+
+		mSeries.add(categoryNames[0], values[0]);
+		SimpleSeriesRenderer renderer = new SimpleSeriesRenderer();
+		renderer.setColor(COLORS[(mSeries.getItemCount() - 1) % COLORS.length]);
+		renderer.setDisplayChartValues(true);
+		mRenderer.addSeriesRenderer(renderer);
+
+		mSeries.add(categoryNames[1], values[1]);
+		renderer = new SimpleSeriesRenderer();
+		renderer.setColor(COLORS[(mSeries.getItemCount() - 1) % COLORS.length]);
+		renderer.setDisplayChartValues(true);
+		mRenderer.addSeriesRenderer(renderer);
+		mRenderer.setZoomEnabled(false);
+		mRenderer.setShowLegend(false);
+		mRenderer.setInScroll(false);
+		mRenderer.setLabelsTextSize(40);
+		mRenderer.setLabelsColor(Color.DKGRAY);
+		mRenderer.setPanEnabled(false);
+
+		mChartView = ChartFactory.getPieChartView(this, mSeries, mRenderer);
+
+		// addContentView(mChartView,
+
+		RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(
+				RelativeLayout.LayoutParams.MATCH_PARENT,
+				RelativeLayout.LayoutParams.WRAP_CONTENT);
+		mChartView.setLayoutParams(params);
+		RelativeLayout layout = (RelativeLayout) findViewById(R.id.relative2);
+		layout.addView(mChartView);
+
 		
-		    values[0] = 25;
-		    categoryNames[0] = "Animali";
-		    values[1] = 20;
-		    categoryNames[1] = "Piante";
-		  
-		    mSeries.add(categoryNames[0], values[0]);
-		    SimpleSeriesRenderer renderer = new SimpleSeriesRenderer();
-		    renderer.setColor(COLORS[(mSeries.getItemCount() - 1) % COLORS.length]);
-		    renderer.setDisplayChartValues(true);
-		    mRenderer.addSeriesRenderer(renderer);
-		    
-		    mSeries.add(categoryNames[1], values[1]);
-		    renderer = new SimpleSeriesRenderer();
-		    renderer.setColor(COLORS[(mSeries.getItemCount() - 1) % COLORS.length]);
-		    renderer.setDisplayChartValues(true);
-		    mRenderer.addSeriesRenderer(renderer);
-		    mRenderer.setZoomEnabled(false);
-		    mRenderer.setShowLegend(false);
-		    mRenderer.setInScroll(false);
-		    mRenderer.setLabelsTextSize(40);
-		    mRenderer.setLabelsColor(Color.DKGRAY);
-		    mRenderer.setPanEnabled(false);
-		    
-		    
-		    mChartView = ChartFactory.getPieChartView(this, mSeries, mRenderer);
-		    
-		    
-//		    addContentView(mChartView,
-		    
-		    
-		    RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.MATCH_PARENT,RelativeLayout.LayoutParams.WRAP_CONTENT);
-		    mChartView.setLayoutParams(params);
-		    RelativeLayout layout = (RelativeLayout) findViewById(R.id.relative2);
-		    layout.addView(mChartView);
-		}
-	
-	
+	}
+
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
