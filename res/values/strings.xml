@@ -22,5 +22,6 @@
     <string name="title_activity_percorsi">Percorsi</string>
     <string name="hello_world">Hello world!</string>
     <string name="title_activity_diario">Diario</string>
+    <string name="title_activity_dettaglio_percorso">DettaglioPercorso</string>
 
 </resources>
