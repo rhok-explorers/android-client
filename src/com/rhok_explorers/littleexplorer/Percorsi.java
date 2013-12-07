@@ -28,11 +28,10 @@ public class Percorsi extends ListActivity {
 	
 		
 		//ListView listview = (ListView) findViewById(R.id.ListPercorsi);
-		
 		//ListView listview = getListView();
 		
-		ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(this,
-				R.layout.row, R.id.textViewList, array);
+		
+		ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(this, R.layout.row, R.id.textViewList, array);
 		//listview.setAdapter(arrayAdapter);
 		setListAdapter(arrayAdapter);
 
@@ -41,7 +40,7 @@ public class Percorsi extends ListActivity {
 	public void onListItemClick(ListView Parent, View v, int position,long id)
 	{
 	    startActivity(new Intent(Percorsi.this, DettaglioPercorso.class)); 
-	    Toast.makeText(this, "Clicked on : " + array[position], Toast.LENGTH_LONG).show();
+	    //Toast.makeText(this, "Clicked on : " + array[position], Toast.LENGTH_LONG).show();
 	}
 		
 	

@@ -1,5 +1,6 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relative"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:paddingBottom="@dimen/activity_vertical_margin"
@@ -7,5 +8,135 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".DettaglioPercorso" >
+
+    <TextView
+        android:id="@+id/numbertappe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/numberlunghezza"
+        android:layout_marginRight="25dp"
+        android:layout_marginTop="25dp"
+        android:gravity="center_vertical"
+        android:text=""
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/textlunghezza"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="5dp"
+        android:gravity="center_vertical"
+        android:text="Lunghezza"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/texttappe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_below="@+id/textlunghezza"
+        android:gravity="center_vertical"
+        android:text="Numero Tappe"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/numberlunghezza"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textlunghezza"
+        android:layout_alignBottom="@+id/textlunghezza"
+        android:layout_alignParentRight="true"
+        android:gravity="center_vertical"
+        android:text="5.2 km"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/numbertappe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/texttappe"
+        android:layout_alignBottom="@id/texttappe"
+        android:layout_alignParentRight="true"
+        android:gravity="center_vertical"
+        android:text="10"
+        android:textSize="20sp" />
+
+    <RatingBar
+        android:id="@+id/rating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:layout_below="@+id/textdifficolta"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/textdescrizione"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/texttappe"
+        android:layout_below="@id/rating"
+        android:layout_marginTop="10dp"
+        android:text="Descrizione del percorso che mi sto accingendo a completare con la fantastica applicazione!"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/textlivello"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/texttappe"
+        android:layout_below="@+id/numbertappe"
+        android:layout_marginTop="15dp"
+        android:gravity="center_vertical"
+        android:text="Livello"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/numberlivello"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/numbertappe"
+        android:layout_alignBaseline="@+id/textlivello"
+        android:layout_marginTop="15dp"
+        android:layout_alignParentRight="true"
+        android:gravity="center_vertical"
+        android:text="1"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/textdifficolta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textlivello"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:gravity="center_vertical"
+        android:text="Difficoltà"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/IniziaAvventura"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/selettorebutton"
+        android:padding="20dp"
+        android:text="Inizia!"
+        android:textColor="#ffffff"
+        android:textSize="25sp" />
+
+    <RelativeLayout
+        android:id="@+id/relative2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/textdescrizione"
+        android:layout_above="@id/IniziaAvventura"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="5dp" >
+
+    </RelativeLayout>
 
 </RelativeLayout>
