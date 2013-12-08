@@ -111,7 +111,7 @@ public class MainActivity extends Activity {
 		@Override
 		public void onClick(View v) {
 			Intent intent3 = new Intent(getApplicationContext(),
-					Informazione.class);
+					Domanda.class);
 			startActivity(intent3);
 		}
 	});

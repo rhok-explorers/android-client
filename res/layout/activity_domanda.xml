@@ -9,7 +9,7 @@
     tools:context=".Domanda" >
 
     <TextView
-        android:id="@+id/titolo"
+        android:id="@+id/titolone"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
@@ -18,21 +18,14 @@
         android:text="Vediamo se hai imparato..."
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
-    <TextView
-        android:id="@+id/domanda"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/titolo"
-        android:layout_marginTop="15dp"
-        android:text="Cosa fa la marmotta quando è impaurita?"
-        android:textSize="20sp" />
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@+id/domanda"
-        android:layout_marginTop="20dp"
-        android:orientation="vertical" >
+        android:layout_marginTop="25dp"
+        android:orientation="vertical"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp" >
 
         <Button
             android:id="@+id/risposta1"
@@ -40,7 +33,11 @@
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
-            android:text="Inizia a correre all&apos;impazzata" />
+            android:background="@drawable/selettorebutton4"
+            android:text="Inizia a correre all&apos;impazzata"
+            android:textColor="@color/bianco"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp" />
 
         <Button
             android:id="@+id/risposta2"
@@ -49,7 +46,11 @@
             android:layout_alignParentRight="true"
             android:layout_alignParentTop="true"
             android:layout_marginTop="20dp"
-            android:text="Fischia per avvertire le altre marmotte del pericolo" />
+            android:background="@drawable/selettorebutton4"
+            android:text="Fischia per avvertire le altre marmotte del pericolo"
+            android:textColor="@color/bianco"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp" />
 
         <Button
             android:id="@+id/risposta3"
@@ -58,7 +59,11 @@
             android:layout_alignParentBottom="true"
             android:layout_alignParentLeft="true"
             android:layout_marginTop="20dp"
-            android:text="Raccoglie tante ghiande e se le mangia tutte" />
+            android:background="@drawable/selettorebutton4"
+            android:text="Raccoglie tante ghiande e se le mangia tutte"
+            android:textColor="@color/bianco"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"  />
 
         <Button
             android:id="@+id/risposta4"
@@ -67,8 +72,22 @@
             android:layout_alignParentBottom="true"
             android:layout_alignParentRight="true"
             android:layout_marginTop="20dp"
-            android:text="Scava una buca e ci si nasconde dentro" />
+            android:background="@drawable/selettorebutton4"
+            android:text="Scava una buca e ci si nasconde dentro"
+            android:textColor="@color/bianco"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"  />
 
     </LinearLayout>
+
+    <TextView
+        android:id="@+id/domanda"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/titolone"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="46dp"
+        android:text="Cosa fa la marmotta quando è impaurita?"
+        android:textSize="20sp" />
 
 </RelativeLayout>
