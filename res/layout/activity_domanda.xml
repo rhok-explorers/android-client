@@ -84,8 +84,9 @@
         android:id="@+id/domanda"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
         android:layout_below="@+id/titolone"
-        android:layout_centerHorizontal="true"
         android:layout_marginTop="46dp"
         android:text="Cosa fa la marmotta quando è impaurita?"
         android:textSize="20sp" />
