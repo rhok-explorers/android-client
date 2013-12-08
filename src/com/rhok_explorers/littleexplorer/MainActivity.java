@@ -40,6 +40,7 @@ public class MainActivity extends Activity {
 	static final String TAG = "EXPLORERS";
 
 	Button IniziaAvventura, IlMioDiario;
+	Button prova;
 	GoogleCloudMessaging gcm;
 	Context context;
 
@@ -60,6 +61,8 @@ public class MainActivity extends Activity {
 		
 		IniziaAvventura = (Button) findViewById(R.id.IniziaAvventura);
 		IniziaAvventura.setTypeface(typeFace);
+		
+		prova = (Button) findViewById(R.id.prova);
 		
 		IlMioDiario = (Button) findViewById(R.id.IlMioDiario);
 		IlMioDiario.setTypeface(typeFace);
@@ -102,7 +105,18 @@ public class MainActivity extends Activity {
 			}
 		});
 
-	}
+	
+		prova.setOnClickListener(new View.OnClickListener() {
+
+		@Override
+		public void onClick(View v) {
+			Intent intent3 = new Intent(getApplicationContext(),
+					Informazione.class);
+			startActivity(intent3);
+		}
+	});
+
+}
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {

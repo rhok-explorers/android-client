@@ -1,5 +1,17 @@
 package com.rhok_explorers.littleexplorer;
 
+import java.io.IOException;
+import java.net.URI;
+import java.net.URISyntaxException;
+
+import org.apache.http.HttpEntity;
+import org.apache.http.HttpResponse;
+import org.apache.http.client.ClientProtocolException;
+import org.apache.http.client.HttpClient;
+import org.apache.http.client.methods.HttpGet;
+import org.apache.http.impl.client.DefaultHttpClient;
+import org.apache.http.util.EntityUtils;
+
 import android.app.Service;
 import android.content.Context;
 import android.content.Intent;
@@ -60,7 +72,7 @@ public void onCreate() {
             Log.d("test","Timer last tick");            
         }
      }.start();
-   
+ 
 }
 
 @Override
@@ -89,12 +101,44 @@ public void onStart(Intent intent, int startId) {
         final double Long = loc.getLongitude(); // Updated long
 
        // System.out.println(lat+Long);
-        Toast.makeText(this, "Your location is "+lat+Long ,Toast.LENGTH_LONG).show();
-        //ConnectMySQL obj = new ConnectMySQL();
-        //obj.call(lat,Long); // Call this method when location is updated and save the data.
-
-        }
-
+       // Toast.makeText(this, "Your location is "+lat+Long ,Toast.LENGTH_LONG).show();
+        
+//        try {
+//            DefaultHttpClient httpClient = new DefaultHttpClient();
+//            HttpGet httpGet = new HttpGet("http://littleexplorers.herokuapp.com/location/" + lat + "/" + Long);
+//
+//            HttpResponse httpResponse = httpClient.execute(httpGet);
+//            HttpEntity httpEntity = httpResponse.getEntity();
+//            String response = EntityUtils.toString(httpEntity);
+//        } catch (ClientProtocolException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		} catch (IOException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
+        
+        
+//        HttpResponse response = null;
+//        try {        
+//                HttpClient client = new DefaultHttpClient();
+//                HttpGet request = new HttpGet();
+//                request.setURI(new URI("http://littleexplorers.herokuapp.com/location/" + lat + "/" + Long));
+//               // Toast.makeText(this, "Your location is "+request.toString() ,Toast.LENGTH_LONG).show();
+//                response = client.execute(request);
+//            } catch (URISyntaxException e) {
+//                e.printStackTrace();
+//            }
+//                catch (ClientProtocolException e) {
+//                // TODO Auto-generated catch block
+//                e.printStackTrace();
+//            } catch (IOException e) {
+//                // TODO Auto-generated catch block
+//                e.printStackTrace();
+//            }  
+      
+      //  Toast.makeText(this, "response is "+response ,Toast.LENGTH_LONG).show();
+        	}
         else 
         {
             String latLongStr = "No lat and longitude found";

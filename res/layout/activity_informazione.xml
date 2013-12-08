@@ -1,0 +1,45 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".Informazione" >
+
+    <TextView
+        android:id="@+id/titolo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="7dp"
+        android:text="Lo sapevi che..."
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <ImageView
+        android:id="@+id/immagine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/titolo"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/marmotta" />
+
+    <TextView
+        android:id="@+id/informazione"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/titolo"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/immagine"
+        android:text="La marmotta è un animale che ama prendere il sole in gruppo: di giorno va in cerca di cibo e di sole, gioca con le altre marmotte, ma rimane sempre vicino alla propria tana, in cui rientra la sera. Quando è impaurita, la marmotta emette un fischio molto forte. Nonostante sia un animale grasso e pesante, riesce a correre, saltare ed arrampicarsi tra le rocce molto velocemente."
+        android:textSize="20sp" />
+
+</RelativeLayout>
+</ScrollView>

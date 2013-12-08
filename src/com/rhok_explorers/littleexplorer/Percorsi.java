@@ -8,6 +8,7 @@ import android.content.Intent;
 import android.content.res.Resources;
 import android.graphics.Color;
 import android.graphics.Typeface;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -17,26 +18,26 @@ import android.widget.Toast;
 
 public class Percorsi extends ListActivity {
 
-	String[] array = {"Percorso 1", "Percorso Marmotta",
-	"Percorso Gabbiano"};
+	
+	
+	String[] array = {"Percorso Povo", "Percorso Marmotta",
+	"Percorso Gabbiano","Sentiero 04", "Percorso Orso", "Intorno al Lago", "Lungo il fiume", "Alla Baita Verde"};
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		//setContentView(R.layout.activity_percorsi);
-		Resources res=getResources();		
-		//TextView.setBackgroundColor(Color.GREEN);
 		
-	
-		
-		//ListView listview = (ListView) findViewById(R.id.ListPercorsi);
-		//ListView listview = getListView();
-		
-		
-		ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(this, R.layout.row, R.id.textViewList, array);
-		//listview.setAdapter(arrayAdapter);
-		setListAdapter(arrayAdapter);
 
+		Typeface typeFace = Typeface.createFromAsset(getAssets(), "fonts/Action_Man.ttf");
+		
+//		TextView titolo = (TextView) findViewById (R.id.titolo);
+//		titolo.setTypeface(typeFace);
+		
+		Resources res=getResources();
+		
+		ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(this, R.layout.row, R.id.nomepercorso, array);
+		setListAdapter(arrayAdapter);
+	
 	}
 
 	public void onListItemClick(ListView Parent, View v, int position,long id)

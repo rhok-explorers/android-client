@@ -7,11 +7,24 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".Percorsi" >
+	
+    
+    <TextView
+	    android:id="@+id/titolo"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_alignParentLeft="true"
+	    android:layout_alignParentTop="true"
+	    android:text="Percorsi disponibili"
+	    android:textAppearance="?android:attr/textAppearanceLarge" />
 
 	<ListView
-    	android:id="@+id/ListPercorsi"
-    	android:layout_width="fill_parent"
-    	android:layout_height="wrap_content" >
+	    android:id="@+id/ListPercorsi"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_alignLeft="@+id/titolo"
+	    android:layout_below="@id/titolo"
+	    android:layout_marginTop="12dp" >
 	</ListView>
 
 </RelativeLayout>

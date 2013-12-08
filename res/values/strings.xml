@@ -28,5 +28,7 @@
     <string name="title_activity_dettaglio_percorso">DettaglioPercorso</string>
     <string name="title_activity_map">Map</string>
     <string name="title_activity_cartina">Cartina</string>
+    <string name="title_activity_informazione">Informazione</string>
+    <string name="title_activity_domanda">Domanda</string>
 
 </resources>
