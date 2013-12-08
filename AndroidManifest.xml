@@ -11,6 +11,13 @@
     <uses-feature
         android:glEsVersion="0x00020000"
         android:required="true" />
+    
+    <permission
+        android:name="info.androidhive.googlemapsv2.permission.MAPS_RECEIVE"
+        android:protectionLevel="signature" />
+ 
+    <uses-permission android:name="info.androidhive.googlemapsv2.permission.MAPS_RECEIVE" />
+ 
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.GET_ACCOUNTS" />
@@ -61,8 +68,8 @@
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
         <meta-data
-            android:name="com.google.android.maps.vi2.18:4E:57:18:BD:D0:03:F3:54:6B:04:74:F8:B7:BB:90:C9:67:45:16"
-            android:value="18:4E:57:18:BD:D0:03:F3:54:6B:04:74:F8:B7:BB:90:C9:67:45:16" />
+            android:name="com.google.android.maps.v2.AIzaSyALQzciJ0xY42f1A-S0CPknYYEvkApLe9c"
+            android:value="AIzaSyALQzciJ0xY42f1A-S0CPknYYEvkApLe9c" />
 
         <receiver
             android:name="com.rhok_explorers.littleexplorer.GcmBroadcastReceiver"
