@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.google.android.maps.MapView
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/mapview"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:clickable="true"
-    android:apiKey="18:4E:57:18:BD:D0:03:F3:54:6B:04:74:F8:B7:BB:90:C9:67:45:16"
-/>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+	<com.google.android.maps.MapView
+    	xmlns:android="http://schemas.android.com/apk/res/android"
+    	android:id="@+id/mapview"
+    	android:layout_width="fill_parent"
+    	android:layout_height="fill_parent"
+    	android:clickable="true"
+    	android:apiKey="18:4E:57:18:BD:D0:03:F3:54:6B:04:74:F8:B7:BB:90:C9:67:45:16"
+	/>
+</LinearLayout>

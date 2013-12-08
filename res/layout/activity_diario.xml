@@ -50,7 +50,7 @@
         android:textSize="20sp" />
     
     <TextView
-        android:id="@+id/textmedaglie"
+        android:id="@+id/numbermedaglie"
         android:layout_width="wrap_content"
         android:layout_height="50dp"
         android:gravity="center_vertical"
@@ -86,7 +86,7 @@
         android:textSize="20sp" />
     
     <TextView
-        android:id="@+id/textpercorsi"
+        android:id="@+id/numberpercorsi"
         android:layout_width="wrap_content"
         android:layout_height="50dp"
         android:gravity="center_vertical"
@@ -122,7 +122,7 @@
         android:textSize="20sp" />
 
     <TextView
-        android:id="@+id/textpercorsiNO"
+        android:id="@+id/numberpercorsiNO"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="center_vertical"

@@ -10,10 +10,12 @@ import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Color;
+import android.graphics.Typeface;
 import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
 
 public class DettaglioPercorso extends Activity {
 
@@ -23,14 +25,38 @@ public class DettaglioPercorso extends Activity {
 	private static int[] COLORS = new int[] { Color.GREEN, Color.BLUE,
 			Color.MAGENTA, Color.YELLOW, Color.RED, Color.DKGRAY, Color.BLACK };
 
-	Button inizia;
-
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_dettaglio_percorso);
+		
+		
+		Typeface typeFace = Typeface.createFromAsset(getAssets(), "fonts/Action_Man.ttf");
+		
+		Button inizia = (Button) findViewById(R.id.Inizia);
+		
+		TextView textlunghezza = (TextView) findViewById (R.id.textlunghezza);
+		TextView texttappe = (TextView) findViewById (R.id.texttappe);
+		TextView textlivello = (TextView) findViewById (R.id.textlivello);
+		TextView textdifficolta = (TextView) findViewById (R.id.textdifficolta);
 
-		inizia = (Button) findViewById(R.id.Inizia);
+		TextView numberlunghezza = (TextView) findViewById (R.id.numberlunghezza);
+		TextView numbertappe = (TextView) findViewById (R.id.numbertappe);
+		TextView numberlivello = (TextView) findViewById (R.id.numberlivello);
+		TextView textdescrizione = (TextView) findViewById (R.id.textdescrizione);
+		
+		
+		textlunghezza.setTypeface(typeFace);
+		texttappe.setTypeface(typeFace);
+		textlivello.setTypeface(typeFace);
+		textdifficolta.setTypeface(typeFace);
+		numberlunghezza.setTypeface(typeFace);
+		numbertappe.setTypeface(typeFace);
+		numberlivello.setTypeface(typeFace);
+		textdescrizione.setTypeface(typeFace);
+		inizia.setTypeface(typeFace);
+		
 		
 		inizia.setOnClickListener(new View.OnClickListener() {
 
@@ -41,6 +67,10 @@ public class DettaglioPercorso extends Activity {
 			}
 		});
 
+		
+		
+		
+		
 		double[] values = new double[2];
 		String[] categoryNames = new String[2];
 
