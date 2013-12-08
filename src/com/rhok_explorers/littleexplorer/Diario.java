@@ -4,12 +4,14 @@ import android.os.Bundle;
 import android.app.Activity;
 import android.graphics.Typeface;
 import android.view.Menu;
-import android.widget.ArrayAdapter;
-import android.widget.ListView;
 import android.widget.TextView;
 
 public class Diario extends Activity {
 	
+	TextView numberpunteggio;
+	TextView numbermedaglie;
+	TextView numberpercorsi;
+	TextView numberpercorsiNO;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -25,10 +27,10 @@ public class Diario extends Activity {
 		TextView textpercorsi = (TextView) findViewById (R.id.textpercorsi);
 		TextView textpercorsiNO = (TextView) findViewById (R.id.textpercorsiNO);
 
-		TextView numberpunteggio = (TextView) findViewById (R.id.numberpunteggio);
-		TextView numbermedaglie = (TextView) findViewById (R.id.numbermedaglie);
-		TextView numberpercorsi = (TextView) findViewById (R.id.numberpercorsi);
-		TextView numberpercorsiNO = (TextView) findViewById (R.id.numberpercorsiNO);
+		numberpunteggio = (TextView) findViewById (R.id.numberpunteggio);
+		numbermedaglie = (TextView) findViewById (R.id.numbermedaglie);
+		numberpercorsi = (TextView) findViewById (R.id.numberpercorsi);
+		numberpercorsiNO = (TextView) findViewById (R.id.numberpercorsiNO);
 		
 		textpunteggio.setTypeface(typeFace);
 		textmedaglie.setTypeface(typeFace);

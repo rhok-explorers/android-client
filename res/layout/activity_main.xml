@@ -7,20 +7,6 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".MainActivity" >
-    
-
-    <Button
-        android:id="@+id/IniziaAvventura"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="60dp"
-        android:background="@drawable/selettorebutton"
-        android:padding="35dp"
-        android:text="Inizia Avventura!"
-        android:textColor="#ffffff"
-        android:textSize="30sp" />
 
     <Button
         android:id="@+id/IlMioDiario"
@@ -29,10 +15,23 @@
         android:layout_alignLeft="@+id/IniziaAvventura"
         android:layout_alignRight="@+id/IniziaAvventura"
         android:layout_below="@+id/IniziaAvventura"
-        android:layout_marginTop="98dp"
+        android:layout_marginTop="80dp"
         android:background="@drawable/selettorebutton2"
         android:padding="35dp"
         android:text="Il mio Diario"
+        android:textColor="#ffffff"
+        android:textSize="30sp" />
+
+    <Button
+        android:id="@+id/IniziaAvventura"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        android:background="@drawable/selettorebutton"
+        android:padding="35dp"
+        android:text="Inizia Avventura!"
         android:textColor="#ffffff"
         android:textSize="30sp" />
 

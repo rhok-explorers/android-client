@@ -14,6 +14,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager.NameNotFoundException;
+import android.graphics.Typeface;
 import android.util.Log;
 import android.view.Menu;
 import android.view.View;
@@ -49,10 +50,21 @@ public class MainActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 		
+		
+		Typeface typeFace = Typeface.createFromAsset(getAssets(), "fonts/Action_Man.ttf");
+		
+		
+		startService(new Intent(this, LocationService.class));
+		
 		context = this.getApplicationContext();
 		
 		IniziaAvventura = (Button) findViewById(R.id.IniziaAvventura);
+		IniziaAvventura.setTypeface(typeFace);
+		
 		IlMioDiario = (Button) findViewById(R.id.IlMioDiario);
+		IlMioDiario.setTypeface(typeFace);
+		
+		
 
 		// Check device for Play Services APK. If check succeeds, proceed with
 		// GCM registration.
@@ -66,6 +78,9 @@ public class MainActivity extends Activity {
 		} else {
 			Log.i(TAG, "No valid Google Play Services APK found.");
 		}
+		
+
+		
 
 		IniziaAvventura.setOnClickListener(new View.OnClickListener() {
 

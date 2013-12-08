@@ -24,7 +24,13 @@ public class DettaglioPercorso extends Activity {
 	private CategorySeries mSeries = new CategorySeries("Expenses");
 	private static int[] COLORS = new int[] { Color.GREEN, Color.BLUE,
 			Color.MAGENTA, Color.YELLOW, Color.RED, Color.DKGRAY, Color.BLACK };
-
+	
+	
+	TextView numberlunghezza;
+	TextView numbertappe;
+	TextView numberlivello;
+	TextView textdescrizione;
+	Button inizia;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -34,17 +40,17 @@ public class DettaglioPercorso extends Activity {
 		
 		Typeface typeFace = Typeface.createFromAsset(getAssets(), "fonts/Action_Man.ttf");
 		
-		Button inizia = (Button) findViewById(R.id.Inizia);
+		inizia = (Button) findViewById(R.id.Inizia);
 		
 		TextView textlunghezza = (TextView) findViewById (R.id.textlunghezza);
 		TextView texttappe = (TextView) findViewById (R.id.texttappe);
 		TextView textlivello = (TextView) findViewById (R.id.textlivello);
 		TextView textdifficolta = (TextView) findViewById (R.id.textdifficolta);
 
-		TextView numberlunghezza = (TextView) findViewById (R.id.numberlunghezza);
-		TextView numbertappe = (TextView) findViewById (R.id.numbertappe);
-		TextView numberlivello = (TextView) findViewById (R.id.numberlivello);
-		TextView textdescrizione = (TextView) findViewById (R.id.textdescrizione);
+		numberlunghezza = (TextView) findViewById (R.id.numberlunghezza);
+		numbertappe = (TextView) findViewById (R.id.numbertappe);
+		numberlivello = (TextView) findViewById (R.id.numberlivello);
+		textdescrizione = (TextView) findViewById (R.id.textdescrizione);
 		
 		
 		textlunghezza.setTypeface(typeFace);

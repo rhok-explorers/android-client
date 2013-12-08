@@ -33,6 +33,13 @@
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
+        
+    <service
+        android:name=".LocationService"
+        android:label="LocationService"
+        android:enabled="true" >
+    </service>
+        
         <activity
             android:name="com.rhok_explorers.littleexplorer.MainActivity"
             android:label="@string/app_name" >
