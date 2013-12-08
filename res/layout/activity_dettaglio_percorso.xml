@@ -10,9 +10,12 @@
     tools:context=".DettaglioPercorso" >
 
 <RelativeLayout 
+    android:id="@+id/primorelative"
+    android:background="@drawable/shapelinear2"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginTop="10dp"
+    android:padding="10dp"
      >
 
     <TextView
@@ -37,16 +40,19 @@
 
    </RelativeLayout>
    
-<RelativeLayout 
+<RelativeLayout
+    android:id="@+id/secondorelative"
+    android:background="@drawable/shapelinear2"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginTop="50dp" >
+    android:layout_marginTop="10dp"
+    android:padding="10dp"
+    android:layout_below="@id/primorelative" >
    
     <TextView
         android:id="@+id/texttappe"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
         android:layout_below="@+id/textlunghezza"
         android:gravity="center_vertical"
         android:text="Numero Tappe"
@@ -65,11 +71,14 @@
     
    </RelativeLayout>
    
-<RelativeLayout 
+<RelativeLayout
+    android:background="@drawable/shapelinear2"
     android:id="@+id/ultimorelative"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginTop="100dp" >
+    android:layout_marginTop="10dp"
+    android:padding="10dp"
+    android:layout_below="@id/secondorelative" >
    
    <TextView
         android:id="@+id/textlivello"
@@ -77,7 +86,6 @@
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/texttappe"
         android:layout_below="@+id/numbertappe"
-        android:layout_marginTop="15dp"
         android:gravity="center_vertical"
         android:text="Livello"
         android:textSize="20sp" />
@@ -88,7 +96,6 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/numbertappe"
         android:layout_alignBaseline="@+id/textlivello"
-        android:layout_marginTop="15dp"
         android:layout_alignParentRight="true"
         android:gravity="center_vertical"
         android:text="1"
